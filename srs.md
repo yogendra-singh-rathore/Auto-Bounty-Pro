@@ -154,3 +154,6 @@ Auto Bounty Pro is a standalone desktop application designed for use in closed o
 - Appendices
 
 ---
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
