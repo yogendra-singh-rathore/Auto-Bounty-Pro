@@ -2,20 +2,20 @@
 
 ## Supported Versions
 
-Use this section to tell people about which versions of your project are
-currently being supported with security updates.
-
 | Version | Supported          |
 | ------- | ------------------ |
-| 5.1.x   | :white_check_mark: |
-| 5.0.x   | :x:                |
-| 4.0.x   | :white_check_mark: |
-| < 4.0   | :x:                |
+| 1.0.x   | :white_check_mark: |
+| < 1.0   | :x:                |
 
 ## Reporting a Vulnerability
 
-Use this section to tell people how to report a vulnerability.
+If you discover a security vulnerability, please report it to us. We will work with you to resolve the issue promptly.
 
-Tell them where to go, how often they can expect to get an update on a
-reported vulnerability, what to expect if the vulnerability is accepted or
-declined, etc.
+To report a vulnerability:
+
+1. Go to the [Security Advisories](https://github.com/yogendra-singh-rathore/Auto-Bounty-Pro/security/advisories) page of this repository.
+2. Click on `New draft security advisory`.
+3. Fill out the form with the details of the vulnerability.
+4. Submit the advisory as a draft.
+
+We will review your report and contact you to coordinate the fix.
