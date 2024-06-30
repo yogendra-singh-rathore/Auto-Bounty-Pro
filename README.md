@@ -20,7 +20,7 @@ Auto Bounty Pro is an open-source, customizable, and robust automation tool desi
 | YAML | Working  | Adding YAML to config the App and lots of Setting would be easy for any user(Even Noobs) to Customize the app | v0 |
 | Flask App | Working | Using Flask for a lightweight web app | v0 |
 | Docker | working | Docker is for use to manage Hacking Tools and its Cross-Platform supports | v0 |
-| Base Docker YAML | working | This YAML helps user to add and remove tools as per there requirements | v0 |
+| Base Docker YAML | working | This YAML helps users to add and remove tools as per their requirements | v0 |
 
 ### Key Features
 
