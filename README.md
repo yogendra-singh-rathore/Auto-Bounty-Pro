@@ -14,6 +14,14 @@
 
 Auto Bounty Pro is an open-source, customizable, and robust automation tool designed to streamline the bug bounty hunting process. Built with flexibility and extensibility in mind, it allows security researchers and penetration testers to efficiently manage and automate various stages of their security assessments.
 
+## Updates Table
+| Update    | Status | Details | Version |
+| -------- | ------- | ------- | ------- |
+| YAML | Working  | Adding YAML to config the App and lots of Setting would be easy for any user(Even Noobs) to Customize the app | v0 |
+| Flask App | Working | Using Flask for a lightweight web app | v0 |
+| Docker | working | Docker is for use to manage Hacking Tools and its Cross-Platform supports | v0 |
+| Base Docker YAML | working | This YAML helps user to add and remove tools as per there requirements | v0 |
+
 ### Key Features
 
 - **Customizable Tool Integration**: Easily add or remove tools based on your specific requirements, categorize them, and integrate them into your workflow.
