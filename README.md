@@ -11,7 +11,10 @@
 )
 ![Support](https://img.shields.io/badge/PyYAM-6.0.1-Green
 )
-
+![Support](https://img.shields.io/badge/Dev_Mode-Under_Developemnt-Green
+)
+![Support](https://img.shields.io/badge/Auto_Bounty_Pro_Version-v0.1.0-Green
+)
 
 | :exclamation:  **Disclaimer**  |
 |---------------------------------|
@@ -24,12 +27,14 @@ Auto Bounty Pro is an open-source, customizable, and robust automation tool desi
 ## Updates Table
 | Update    | Status | Details | Version |
 | -------- | ------- | ------- | ------- |
-| YAML | Working  | Adding YAML to config the App and lots of Setting would be easy for any user(Even Noobs) to Customize the app | v0 |
-| Flask App | Working | Using Flask for a lightweight web app | v0 |
-| Docker | working | Docker is for use to manage Hacking Tools and its Cross-Platform supports | v0 |
-| Base Docker YAML | working | This YAML helps users to add and remove tools as per their requirements | v0 |
-| Tool Registry | Working | Adding YAML Based Tool Registry to handel Install and Remove Tools | v0 |
-| Plugin | working | Allow User to create new Tools and plugin With Auto Bounty Pro | v0 |
+| YAML | Done  | Adding YAML to config the App and lots of Setting would be easy for any user(Even Noobs) to Customize the app | v0.1.0 |
+| Flask App | Done | Using Flask for a lightweight web app | v0.1.0 |
+| Docker | Done | Docker is for use to manage Hacking Tools and its Cross-Platform supports | v0.1.0 |
+| Base Docker YAML | working | This YAML helps users to add and remove tools as per their requirements | v0.1.2 |
+| Tool Registry | Done | Adding YAML Based Tool Registry to handel Install and Remove Tools | v0.1.0 |
+| Plugin | Done | Allow User to create new Tools and plugin With Auto Bounty Pro | v0.1.0 |
+| Dashbard | wrodking | Allow User view all activity and provide easy readibility | v0.1.5 |
+| RestFul API | wrodking | Allow User to work with other and Access Tool Anyware | v0.2.0 |
 
 ### Key Features
 
