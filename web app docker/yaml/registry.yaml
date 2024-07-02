@@ -1,0 +1,29 @@
+tools:
+  recon_tools:
+    - name: Tool 1
+      description: Description for Tool 1
+      docker_image: recon_tool1:latest
+    - name: Tool 2
+      description: Description for Tool 2
+      docker_image: recon_tool2:latest
+  vulnerability_tools:
+    - name: Tool 3
+      description: Description for Tool 3
+      docker_image: vuln_tool1:latest
+    - name: Tool 4
+      description: Description for Tool 4
+      docker_image: vuln_tool2:latest
+  exploit_tools:
+    - name: Tool 5
+      description: Description for Tool 5
+      docker_image: exploit_tool1:latest
+    - name: Tool 6
+      description: Description for Tool 6
+      docker_image: exploit_tool2:latest
+  utility_tools:
+    - name: Tool 7
+      description: Description for Tool 7
+      docker_image: utility_tool1:latest
+    - name: Tool 8
+      description: Description for Tool 8
+      docker_image: utility_tool2:latest

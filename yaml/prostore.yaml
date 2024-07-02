@@ -1,0 +1,16 @@
+docker_images:
+- author: Author 1
+  category: recon_tools
+  image_name: googlesky/sqlmap
+  install_status: uninstall
+  tools:
+  - SQLMap
+  url: https://hub.docker.com/r/googlesky/sqlmap
+- author: Author 2
+  category: vulnerability_tools
+  image_name: anotherdocker/image
+  install_status: uninstall
+  tools:
+  - Tool3
+  - Tool4
+  url: https://hub.docker.com/r/anotherdocker/image

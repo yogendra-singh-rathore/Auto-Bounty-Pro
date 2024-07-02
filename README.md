@@ -1,10 +1,20 @@
 <h1 align="center">
   <br>
-  <a href="https://nuclei.projectdiscovery.io"><img src="static/auto_bounty_pro_logo.png" width="200px" alt="Nuclei"></a>
+  <a href="https://www.yogendrasinghrathore.in/"><img src="static/images/auto_bounty_pro_logo.png" width="200px" alt="Auto Bounty Pro"></a>
 </h1>
 
 <h4 align="center">Customizable, Robust Automation for Comprehensive Bug Bounty Hunting Tool</h4>
 
+![Python](https://img.shields.io/badge/Python-3.11.4-Green
+)
+![Flask](https://img.shields.io/badge/Flask-3.0.3-Green
+)
+![PyYaml](https://img.shields.io/badge/PyYAM-6.0.1-Green
+)
+![DevMod](https://img.shields.io/badge/Dev_Mode-Under_Developemnt-Green
+)
+![Tool_Version](https://img.shields.io/badge/Auto_Bounty_Pro_Version-v0.1.0-Green
+)
 
 | :exclamation:  **Disclaimer**  |
 |---------------------------------|
@@ -17,10 +27,14 @@ Auto Bounty Pro is an open-source, customizable, and robust automation tool desi
 ## Updates Table
 | Update    | Status | Details | Version |
 | -------- | ------- | ------- | ------- |
-| YAML | Working  | Adding YAML to config the App and lots of Setting would be easy for any user(Even Noobs) to Customize the app | v0 |
-| Flask App | Working | Using Flask for a lightweight web app | v0 |
-| Docker | working | Docker is for use to manage Hacking Tools and its Cross-Platform supports | v0 |
-| Base Docker YAML | working | This YAML helps users to add and remove tools as per their requirements | v0 |
+| YAML | Done  | Adding YAML to config the App and lots of Setting would be easy for any user(Even Noobs) to Customize the app | v0.1.0 |
+| Flask App | Done | Using Flask for a lightweight web app | v0.1.0 |
+| Docker | Done | Docker is for use to manage Hacking Tools and its Cross-Platform supports | v0.1.0 |
+| Base Docker YAML | working | This YAML helps users to add and remove tools as per their requirements | v0.1.2 |
+| Tool Registry | Done | Adding YAML Based Tool Registry to handel Install and Remove Tools | v0.1.0 |
+| Plugin | Done | Allow User to create new Tools and plugin With Auto Bounty Pro | v0.1.0 |
+| Dashbard | wrodking | Allow User view all activity and provide easy readibility | v0.1.5 |
+| RestFul API | wrodking | Allow User to work with other and Access Tool Anyware | v0.2.0 |
 
 ### Key Features
 
@@ -36,6 +50,36 @@ Auto Bounty Pro is an open-source, customizable, and robust automation tool desi
 ### Mission
 
 Our mission is to empower security researchers and penetration testers with a tool that not only simplifies and automates the bug bounty process but also adapts to their unique workflows and needs. By providing a flexible and robust platform, we aim to enhance productivity and efficiency in identifying and mitigating security vulnerabilities.
+
+## Prerequisites
+- Python 3.11.4
+- Docker in Your Local Machine
+
+## Installation
+Clone Github Repo
+  ```bash
+    git clone git@github.com:yogendra-singh-rathore/Auto-Bounty-Pro.git
+    
+    cd Auto-Bounty-Pro
+
+  ```
+  Open CMD
+  ```bash
+    python -m venv autobounty
+
+  ```
+  Install requirement and run
+  ```bash
+  pip install -r requirements.txt
+  python main.py
+  ```
+
+## Install Docker Based Web App
+ ```bash
+  docker pull m3evil/auto-bounty-pro:testimage
+  docker container run -d -p 3000:3000 m3evil/auto-bounty-pro:testimage
+  ```
+
 
 ## Donations
 ![Support](https://img.shields.io/badge/Support-Auto%20Bounty%20Pro%20-Green

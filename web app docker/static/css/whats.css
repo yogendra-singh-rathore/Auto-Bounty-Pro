@@ -1,0 +1,16 @@
+.updates-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-updates, .video-updates {
+    width: 45%;
+}
+
+.update-item, .video-item {
+    margin-bottom: 20px;
+}
+
+.video-item img {
+    width: 150%;
+}

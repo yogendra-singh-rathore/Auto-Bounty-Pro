@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block current_menu %}
+    <h2>Pro Store</h2>
+    <nav class="horizontal-menu">
+        <ul>
+            <li><a href="{{ url_for('prostore') }}">Overview</a></li>
+            <li><a href="{{ url_for('whatsnew') }}">What's New</a></li>
+            <li><a href="{{ url_for('help') }}">Help</a></li>
+        </ul>
+    </nav>
+{% endblock %}
+
+{% block content %}
+    <table>
+        <thead>
+            <tr>
+                <th>Author Name</th>
+                <th>Docker Image Name</th>
+                <th>Category</th>
+                <th>List of Tools</th>
+                <th>Docker URL</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for image in docker_images %}
+            <tr>
+                <td>{{ image.author }}</td>
+                <td>{{ image.image_name }}</td>
+                <td>{{ image.category.replace('_', ' ').title() }}</td>
+                <td>{{ image.tools | join(', ') }}</td>
+                <td><a href="{{ image.url }}" target="_blank">{{ image.url }}</a></td>
+                <td>
+                    {% if image.install_status == 'uninstall' %}
+                    <form action="{{ url_for('install_image') }}" method="POST">
+                        <input type="hidden" name="image_name" value="{{ image.image_name }}">
+                        <input type="hidden" name="category" value="{{ image.category }}">
+                        <input type="hidden" name="tools" value="{{ image.tools | join(',') }}">
+                        <button type="submit">Download</button>
+                    </form>
+                    {% else %}
+                    <form action="{{ url_for('uninstall_image') }}" method="POST">
+                        <input type="hidden" name="image_name" value="{{ image.image_name }}">
+                        <input type="hidden" name="category" value="{{ image.category }}">
+                        <input type="hidden" name="tools" value="{{ image.tools | join(',') }}">
+                        <button type="submit">Uninstall</button>
+                    </form>
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Bounty Pro</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/assets.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/whats.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/help.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/prostore.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="{{ url_for('static', filename='images/auto_bounty_pro_logo.png') }}" alt="Logo">
+            <p>Developed by - Yogendra Singh Rathore</p>
+        </div>
+    </header>
+    <div class="container">
+        <div class="main-content">
+            <nav class="sidebar">
+                <ul>
+                    <li><a href="{{ url_for('dashboard') }}"> Dashboard </a></li>
+                    <li><a href="{{ url_for('assets') }}"> Assets </a></li>
+                    <li class="dropdown">
+                        <a href="#" id="attack-menu"> Attack <span class="arrow">&#9662;</span></a>
+                        <ul class="submenu" id="attack-submenu">
+                            {% for category, tools_list in tools.items() %}
+                            <li class="dropdown">
+                                <a href="#" class="category-menu">{{ category.replace('_', ' ').title() }} <span class="arrow">&#9662;</span></a>
+                                <ul class="submenu">
+                                    {% for tool in tools_list %}
+                                    <li><a href="#">{{ tool.name }}</a></li>
+                                    {% endfor %}
+                                </ul>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                    <li><a href="{{ url_for('prostore') }}"> Pro Store</a></li>
+                    <li><a href="#"> About Us</a></li>
+                    <li><a href="{{ url_for('help') }}"> Help</a></li>
+                </ul>
+            </nav>
+            <div class="content">
+                {% block current_menu %}
+                {% endblock %}
+                {% block content %}{% endblock %}
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="social-media">
+            <a href="https://github.com/yogendra-singh-rathore/Auto-Bounty-Pro" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.facebook.com/cybrscript/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.youtube.com/channel/UCBQ-ZsCQld3xiOwsN04hSfg" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://x.com/cybrscript" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/cybrscript/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.yogendrasinghrathore.in/" target="_blank"><i class="fas fa-globe"></i></a>
+        </div>
+        <p>&copy; 2024 Yogendra Singh Rathore. MIT License.</p>
+    </footer>
+
+    <script>
+        document.getElementById('attack-menu').addEventListener('click', function(event) {
+            event.preventDefault();
+            var submenu = document.getElementById('attack-submenu');
+            submenu.classList.toggle('show');
+        });
+
+        document.querySelectorAll('.category-menu').forEach(function(menu) {
+            menu.addEventListener('click', function(event) {
+                event.preventDefault();
+                var submenu = this.nextElementSibling;
+                submenu.classList.toggle('show');
+            });
+        });
+    </script>
+</body>
+</html>
