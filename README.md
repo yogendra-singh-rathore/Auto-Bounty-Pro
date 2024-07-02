@@ -20,6 +20,16 @@
 |---------------------------------|
 | **This project is in active development**. Expect breaking changes with releases. Review the release changelog before updating. |
 
+### Video: Auto Bounty Pro Overview
+
+Check out our introductory video to Auto Bounty Pro, showcasing its features and capabilities in bug bounty automation.
+
+- **Title:** Auto Bounty Pro Overview
+- **Description:** Learn how Auto Bounty Pro can streamline your bug bounty tasks with Docker integration, volume management, and more.
+- **Tags:** #bugbounty #automationtools #opensource
+
+[![Watch the video](https://img.youtube.com/vi/T-C1CzmPA4U/maxresdefault.jpg)](https://youtu.be/T-C1CzmPA4U)
+
 ## About Auto Bounty Pro
 
 Auto Bounty Pro is an open-source, customizable, and robust automation tool designed to streamline the bug bounty hunting process. Built with flexibility and extensibility in mind, it allows security researchers and penetration testers to efficiently manage and automate various stages of their security assessments.
