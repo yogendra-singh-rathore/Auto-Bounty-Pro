@@ -1,0 +1,143 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.main-content {
+    display: flex;
+    flex: 1;
+}
+
+.sidebar {
+    background-color: #222;
+    color: white;
+    width: 200px;
+    padding: 1em;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    margin: 1em 0;
+    position: relative;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 0.5em;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    background-color: #444;
+}
+
+.arrow {
+    margin-left: auto;
+    font-size: 0.8em;
+}
+
+.submenu {
+    display: none;
+    padding-left: 1em;
+}
+
+.submenu.show {
+    display: block;
+}
+
+.submenu li {
+    margin: 0;
+}
+
+.submenu li a {
+    padding: 0.5em 1em;
+}
+
+.submenu li a:hover {
+    background-color: #555;
+}
+
+.horizontal-menu {
+    margin-top: 1em;
+}
+
+.horizontal-menu ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    border-bottom: 2px solid #ddd;
+}
+
+.horizontal-menu ul li {
+    margin-right: 1em;
+}
+
+.horizontal-menu ul li a {
+    text-decoration: none;
+    color: #333;
+    padding: 0.5em 0;
+}
+
+.horizontal-menu ul li.active a {
+    border-bottom: 2px solid blue;
+}
+
+.content {
+    flex: 1;
+    padding: 1em;
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+.social-media {
+    margin-bottom: 1em;
+}
+
+.social-media a {
+    color: white;
+    font-size: 1.5em;
+    margin: 0 0.5em;
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: #ddd;
+}

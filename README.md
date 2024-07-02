@@ -1,9 +1,16 @@
 <h1 align="center">
   <br>
-  <a href="https://nuclei.projectdiscovery.io"><img src="static/auto_bounty_pro_logo.png" width="200px" alt="Nuclei"></a>
+  <a href="https://www.yogendrasinghrathore.in/"><img src="static/images/auto_bounty_pro_logo.png" width="200px" alt="Auto Bounty Pro"></a>
 </h1>
 
 <h4 align="center">Customizable, Robust Automation for Comprehensive Bug Bounty Hunting Tool</h4>
+
+![Support](https://img.shields.io/badge/Python-3.11.4-Green
+)
+![Support](https://img.shields.io/badge/Flask-3.0.3-Green
+)
+![Support](https://img.shields.io/badge/PyYAM-6.0.1-Green
+)
 
 
 | :exclamation:  **Disclaimer**  |
@@ -21,6 +28,8 @@ Auto Bounty Pro is an open-source, customizable, and robust automation tool desi
 | Flask App | Working | Using Flask for a lightweight web app | v0 |
 | Docker | working | Docker is for use to manage Hacking Tools and its Cross-Platform supports | v0 |
 | Base Docker YAML | working | This YAML helps users to add and remove tools as per their requirements | v0 |
+| Tool Registry | Working | Adding YAML Based Tool Registry to handel Install and Remove Tools | v0 |
+| Plugin | working | Allow User to create new Tools and plugin With Auto Bounty Pro | v0 |
 
 ### Key Features
 

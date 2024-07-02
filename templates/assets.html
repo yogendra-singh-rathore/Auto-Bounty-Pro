@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+
+{% block current_menu %}
+<h2>Assets </h2>
+<nav class="horizontal-menu">
+    <ul>
+        <li><a href="{{ url_for('assets') }}">Overview</a></li>
+        <li><a href="{{ url_for('whatsnew') }}">What's New</a></li>
+        <li><a href="{{ url_for('help') }}">Help</a></li>
+    </ul>
+</nav>
+<br>
+{% endblock %}
+
+{% block content %}
+<div class="header-container">
+    <h1>Manage Assets</h1>
+    <div class="button-instructions">
+        <p>Instructions:</p>
+        <ul>
+            <li><strong>Add Asset:</strong> To Add and Create Your Target</li>
+            <li><strong>Save Button:</strong> To Select Your Target to Perform Bug Bountys</li>
+        </ul>
+    </div>
+</div>
+
+<div class="form-container">
+    <!-- Form to add new asset -->
+    <form id="add-asset-form" method="POST" action="/add_asset" class="form-inline">
+        <div class="form-group">
+            <label for="program_name">Program Name:</label>
+            <input type="text" id="program_name" name="program_name" required>
+        </div>
+        <div class="form-group">
+            <label for="platform_name">Platform Name:</label>
+            <input type="text" id="platform_name" name="platform_name" required>
+        </div>
+        <div class="form-group">
+            <button type="submit">Add Asset</button>
+            <button id="save-btn">Save</button>
+        </div>
+    </form>
+</div>
+
+<!-- Table to display assets -->
+<table>
+    <thead>
+        <tr>
+            <th>Asset Name</th>
+            <th>Platform</th>
+            <th>Volume Name</th>
+            <th>Select Target</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for asset in assets %}
+        <tr>
+            <td>{{ asset[1] }}</td>
+            <td>{{ asset[2] }}</td>
+            <td>{{ asset[3] }}</td>
+            <td>
+                <input type="radio" name="select_target" value="{{ asset[3] }}">
+            </td>
+            <td>
+                <form method="POST" action="/delete_asset">
+                    <input type="hidden" name="volume_name" value="{{ asset[3] }}">
+                    <button type="submit">Delete</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<button id="save-btn">Save</button>
+<script>
+    document.getElementById('save-btn').addEventListener('click', function() {
+        var selectedVolume = document.querySelector('input[name="select_target"]:checked');
+        if (selectedVolume) {
+            fetch('/save_docker_volume', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: 'volume_name=' + encodeURIComponent(selectedVolume.value)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 'success') {
+                    alert('Docker volume saved: ' + data.docker_volume);
+                }
+            });
+        } else {
+            alert('Please select a target.');
+        }
+    });
+</script>
+
+{% endblock %}

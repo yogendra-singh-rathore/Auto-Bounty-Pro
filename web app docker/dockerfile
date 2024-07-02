@@ -1,0 +1,50 @@
+# Use the Python 3.11.4 slim image as the base image
+FROM python:3.11.4-slim
+
+# Install Docker dependencies
+RUN apt-get update && apt-get install -y \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    gnupg \
+    lsb-release \
+    && curl -fsSL https://download.docker.com/linux/debian/gpg | gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg \
+    && echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/debian $(lsb_release -cs) stable" > /etc/apt/sources.list.d/docker.list \
+    && apt-get update \
+    && apt-get install -y docker-ce docker-ce-cli containerd.io
+
+# Set the working directory inside the container
+WORKDIR /app
+
+# Copy the current directory contents into the container at /app
+COPY . /app
+
+# Upgrade pip to the latest version
+RUN /usr/local/bin/python -m pip install --upgrade pip
+
+# Install dependencies from requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Expose port 3000 to allow external access
+EXPOSE 3000
+
+# Specify the command to run the Flask application
+CMD python ./main.py
+
+
+
+
+# Command to Build Your Own Docker
+
+# Create Image
+# 1) docker build -t <Your Docker Name>/auto-bounty-pro:0.1.0 .
+
+# Test Your Docker Image Before Publish
+# 2) docker container run -d -p 3000:3000 <Your Docker Name>/auto-bounty-pro:0.1.0
+
+# To Stop or Close Docker
+# 3) docker container ls
+# docker container stop xxxx #fist 4 leter of container ID
+
+# Publish Your Docker Image
+# 4) docker push <Your Docker Name>/auto-bounty-pro:0.1.0
