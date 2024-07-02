@@ -51,6 +51,36 @@ Auto Bounty Pro is an open-source, customizable, and robust automation tool desi
 
 Our mission is to empower security researchers and penetration testers with a tool that not only simplifies and automates the bug bounty process but also adapts to their unique workflows and needs. By providing a flexible and robust platform, we aim to enhance productivity and efficiency in identifying and mitigating security vulnerabilities.
 
+## Prerequisites
+- Python 3.11.4
+- Docker in Your Local Machine
+
+## Installation
+Clone Github Repo
+  ```bash
+    git clone git@github.com:yogendra-singh-rathore/Auto-Bounty-Pro.git
+    
+    cd Auto-Bounty-Pro
+
+  ```
+  Open CMD
+  ```bash
+    python -m venv autobounty
+
+  ```
+  Install requirement and run
+  ```bash
+  pip install -r requirements.txt
+  python main.py
+  ```
+
+## Install Docker Based Web App
+ ```bash
+  docker pull m3evil/auto-bounty-pro:testimage
+  docker container run -d -p 3000:3000 m3evil/auto-bounty-pro:testimage
+  ```
+
+
 ## Donations
 ![Support](https://img.shields.io/badge/Support-Auto%20Bounty%20Pro%20-Green
 )
