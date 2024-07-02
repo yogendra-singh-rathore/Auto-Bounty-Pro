@@ -31,10 +31,10 @@ Auto Bounty Pro is an open-source, customizable, and robust automation tool desi
 | Flask App | Done | Using Flask for a lightweight web app | v0.1.0 |
 | Docker | Done | Docker is for use to manage Hacking Tools and its Cross-Platform supports | v0.1.0 |
 | Base Docker YAML | working | This YAML helps users to add and remove tools as per their requirements | v0.1.2 |
-| Tool Registry | Done | Adding YAML Based Tool Registry to handel Install and Remove Tools | v0.1.0 |
+| Tool Registry | Done | Adding YAML Based Tool Registry to handle Install and Remove Tools | v0.1.0 |
 | Plugin | Done | Allow User to create new Tools and plugin With Auto Bounty Pro | v0.1.0 |
-| Dashbard | wrodking | Allow User view all activity and provide easy readibility | v0.1.5 |
-| RestFul API | wrodking | Allow User to work with other and Access Tool Anyware | v0.2.0 |
+| Dashboard | working | Allow users to view all activity and provide easy readability | v0.1.5 |
+| RestFul API | working | Allow User to work with others and Access Tool Anyware | v0.2.0 |
 
 ### Key Features
 
