@@ -5,15 +5,15 @@
 
 <h4 align="center">Customizable, Robust Automation for Comprehensive Bug Bounty Hunting Tool</h4>
 
-![Support](https://img.shields.io/badge/Python-3.11.4-Green
+![Python](https://img.shields.io/badge/Python-3.11.4-Green
 )
-![Support](https://img.shields.io/badge/Flask-3.0.3-Green
+![Flask](https://img.shields.io/badge/Flask-3.0.3-Green
 )
-![Support](https://img.shields.io/badge/PyYAM-6.0.1-Green
+![PyYaml](https://img.shields.io/badge/PyYAM-6.0.1-Green
 )
-![Support](https://img.shields.io/badge/Dev_Mode-Under_Developemnt-Green
+![DevMod](https://img.shields.io/badge/Dev_Mode-Under_Developemnt-Green
 )
-![Support](https://img.shields.io/badge/Auto_Bounty_Pro_Version-v0.1.0-Green
+![Tool_Version](https://img.shields.io/badge/Auto_Bounty_Pro_Version-v0.1.0-Green
 )
 
 | :exclamation:  **Disclaimer**  |
